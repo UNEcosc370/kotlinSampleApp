@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/farmAreaWrap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/fbfarmArea"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Farm Area (ha)"
+            android:inputType="numberDecimal" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/growthRateWrap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/farmAreaWrap">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/fbGrowthRate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Pasture growth rate (kg DM / ha /d)"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/startDateWrap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/endDateWrap"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/growthRateWrap">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/fbStartDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nextFocusForward="@+id/fbEndDate"
+            android:nextFocusDown="@+id/fbEndDate"
+            android:hint="Start date"
+            android:inputType="date" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/endDateWrap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/startDateWrap"
+        app:layout_constraintTop_toBottomOf="@+id/growthRateWrap">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/fbEndDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nextFocusForward="@+id/fbStartMass"
+            android:nextFocusDown="@+id/fbStartMass"
+            android:hint="End date"
+            android:inputType="date" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/startMassWrap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/endMassWrap"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startDateWrap">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/fbStartMass"
+            android:nextFocusForward="@+id/fbEndMass"
+            android:nextFocusDown="@+id/fbEndMass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="kg DM/ha at start"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/endMassWrap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/startMassWrap"
+        app:layout_constraintTop_toBottomOf="@+id/endDateWrap">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/fbEndMass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="kg DM/ha at end"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/fbAvailableFeed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Available feed"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/startMassWrap" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/dsePerHeadWrap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fbAvailableFeed">
+
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/fbDsePerHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="DSE per head"
+            android:inputType="numberDecimal" />
+    </android.support.design.widget.TextInputLayout>
+
+    <TextView
+        android:id="@+id/fbStockDensity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Stocking density"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dsePerHeadWrap" />
+
+    <TextView
+        android:id="@+id/fbStockUnits"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Number of stock units"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fbStockDensity" />
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+
+        android:id="@+id/navigation_paddocks"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_paddocks" />
+
+    <item
+        android:id="@+id/navigation_feed_budget"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_feed_budget"
+        android:checked="true"
+        />
+
+    <item
+        android:id="@+id/navigation_grazing_period"
+        android:icon="@drawable/ic_dashboard_black_24dp"
+        android:title="@string/title_grazing_period" />
+
+</menu>
